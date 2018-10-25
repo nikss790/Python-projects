@@ -9,7 +9,7 @@ import pandas as pd
 import time
 nuxeo_api = 'http://nuxeoalb-stage14-1263263825.us-west-2.elb.amazonaws.com:8080/nuxeo/api/v1/id/'
 nuxeo_authentication = {"content-type": "application/json", "X-NXproperties": "*", "Nuxeo-Transaction-Timeout": "300", "Authorization": "Basic QWRtaW5pc3RyYXRvcjpOdXgzMCEyMDE4"}
-get_assets_licenee_group_file = 'https://github.com/nikss790/Python-projects/blob/master/Jim%20Lee-assets_licensee_groups.csv'
+get_assets_licenee_group_file = 'https://raw.githubusercontent.com/nikss790/Python-projects/master/Jim%20Lee-assets_licensee_groups.csv'
 
 
 def get_exact_json_data(licensee_group_from_Nuxeo, licensee_group_from_librarian):
