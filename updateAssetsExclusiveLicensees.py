@@ -7,10 +7,8 @@ import json
 import requests
 import pandas as pd
 import time
-nuxeo_api = 'https://dam.starlabs.warnerbros.com/nuxeo/api/v1/id/'
-#nuxeo_api = 'http://nuxeoalb-stage14-1263263825.us-west-2.elb.amazonaws.com:8080/nuxeo/api/v1/id/'
-nuxeo_authentication = {"content-type": "application/json", "X-NXproperties": "*", "Nuxeo-Transaction-Timeout": "300" ,"Authorization" :"Basic Vml2ZWsuUGFuZGV5QHdiY29uc3VsdGFudC5jb206Vml2ZWtAMTIz"}
-#nuxeo_authentication = {"content-type": "application/json", "X-NXproperties": "*", "Nuxeo-Transaction-Timeout": "300", "Authorization": "Basic QWRtaW5pc3RyYXRvcjpOdXgzMCEyMDE4"}
+nuxeo_api = 'http://nuxeoalb-stage14-1263263825.us-west-2.elb.amazonaws.com:8080/nuxeo/api/v1/id/'
+nuxeo_authentication = {"content-type": "application/json", "X-NXproperties": "*", "Nuxeo-Transaction-Timeout": "300", "Authorization": "Basic QWRtaW5pc3RyYXRvcjpOdXgzMCEyMDE4"}
 get_assets_licenee_group_file = 'C:\\Users\\v.b.pandey\\Desktop\\Jim-Lee-assets_licensee_group-2.csv'
 
 
