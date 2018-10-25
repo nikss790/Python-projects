@@ -9,7 +9,7 @@ import pandas as pd
 import time
 nuxeo_api = 'http://nuxeoalb-stage14-1263263825.us-west-2.elb.amazonaws.com:8080/nuxeo/api/v1/id/'
 nuxeo_authentication = {"content-type": "application/json", "X-NXproperties": "*", "Nuxeo-Transaction-Timeout": "300", "Authorization": "Basic QWRtaW5pc3RyYXRvcjpOdXgzMCEyMDE4"}
-get_assets_licenee_group_file = '/var/jenkins_home/workspace/Update_Licensee_Group_Utility/assets_licensee_groups.csv'
+get_assets_licenee_group_file = '/var/jenkins_home/workspace/update_licensee_group_utility/assets_licensee_groups.csv'
 
 
 def get_exact_json_data(licensee_group_from_Nuxeo, licensee_group_from_librarian):
@@ -71,7 +71,7 @@ def get_asset_uid_with_licenee_groups():
                 print("Response body is %s " % get_assets_details.json(),)
                 asset_uid = get_assets_details.json()['uid']
                 asset_name = get_assets_details.json()['title']
-                with open('/var/jenkins_home/workspace/Update_Licensee_Group_Utility/'+asset_name+'.json', 'w') as outfile:
+                with open('/var/jenkins_home/workspace/update_licensee_group_utility/'+asset_name+'.json', 'w') as outfile:
                     json.dump(get_assets_details.json(), outfile)
                 print("job id to be updated is %s " % (asset_uid, ))
                 licensee_group_fromDam = get_assets_details.json(
